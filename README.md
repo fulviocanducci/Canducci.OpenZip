@@ -2,8 +2,7 @@
 
 Canducci.OpenZip is a .NET library that provides functionality for creating, extracting, and managing ZIP files. It is designed to be easy to use and integrates seamlessly with .NET applications.
 
-[![Version](https://img.shields.io/nuget/v/Canducci.OpenZip.svg?style=plastic&label=version)](https://www.nuget.org/packages/Canducci.OpenZip/)
-[![NuGet](https://img.shields.io/nuget/dt/Canducci.OpenZip.svg)](https://www.nuget.org/packages/Canducci.OpenZip/) [![NuGet Packages](https://github.com/fulviocanducci/Canducci.OpenZip/actions/workflows/pack.yml/badge.svg)](https://github.com/fulviocanducci/Canducci.OpenZip/actions/workflows/pack.yml)
+[![Version](https://img.shields.io/nuget/v/Canducci.OpenZip.svg?style=plastic&label=version)](https://www.nuget.org/packages/Canducci.OpenZip/) [![NuGet](https://img.shields.io/nuget/dt/Canducci.OpenZip.svg)](https://www.nuget.org/packages/Canducci.OpenZip/) [![Canducci.OpenZip](https://github.com/fulviocanducci/Canducci.OpenZip/actions/workflows/dotnet-desktop.yml/badge.svg)](https://github.com/fulviocanducci/Canducci.OpenZip/actions/workflows/dotnet-desktop.yml)
 
 
 ## Add Package
