@@ -13,10 +13,6 @@ namespace Canducci.OpenZip
             services.AddTransient<IZipCodeRequest, ZipCodeRequest>();
             return services;
         }
-    }
-
-    internal static class ExtensionsInternal
-    {
         internal static string ToNumber(this string zipCode)
         {
             return System.Text.RegularExpressions.Regex.Replace(zipCode, "[^0-9]", "");

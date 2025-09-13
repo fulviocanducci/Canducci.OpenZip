@@ -1,5 +1,12 @@
 ﻿namespace Canducci.OpenZip
 {
+    /// <summary>
+    /// Represents detailed information about a specific zip code, including its associated address, locality, state,
+    /// and other related metadata.
+    /// </summary>
+    /// <remarks>This class is typically used to store and retrieve information about a zip code and its
+    /// corresponding geographical and administrative details. The properties of this class are populated using JSON
+    /// serialization, with property names mapped to their respective JSON keys.</remarks>
     public class ZipCodeData
     {
         [System.Text.Json.Serialization.JsonConstructor]
