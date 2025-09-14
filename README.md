@@ -23,6 +23,11 @@ using Canducci.OpenZip;
 
 ```csharp
 string zipCode = "19206-082";           
+IWebRequestClient WebRequestClient = new WebRequestClient(new HttpClient()
+{
+	BaseAddress = new Uri("https://opencep.com/v1/")
+});
+ZipCodeRequest ZipCodeRequest = new(WebRequestClient);
 ZipCodeResult result = await ZipCodeRequest.GetZipCodeAsync(zipCode);
 if (result.IsValid)
 {
