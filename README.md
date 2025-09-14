@@ -19,7 +19,7 @@ dotnet add package Canducci.OpenZip
 using Canducci.OpenZip;
 ```
 
-### code
+### code (in-line)
 
 ```csharp
 string zipCode = "19206-082";           
@@ -27,7 +27,7 @@ IWebRequestClient WebRequestClient = new WebRequestClient(new HttpClient()
 {
 	BaseAddress = new Uri("https://opencep.com/v1/")
 });
-ZipCodeRequest ZipCodeRequest = new(WebRequestClient);
+IZipCodeRequest ZipCodeRequest = new(WebRequestClient);
 ZipCodeResult result = await ZipCodeRequest.GetZipCodeAsync(zipCode);
 if (result.IsValid)
 {
@@ -42,5 +42,34 @@ if (result.IsValid)
 	data.State
 	data.Region
 	data.Ibge
+}
+```
+
+### code (Web)
+
+```csharp
+Services.AddOpenZip(this IServiceCollection services);
+```
+
+### Controllers
+
+```csharp
+public async Task<ActionResult> GetZip(IZipCodeRequest zipCodeRequest)
+{
+	ZipCodeResult result = await zipCodeRequest.GetZipCodeAsync(zipCode);
+	if (result.IsValid)
+	{
+		var data = result.Data;
+		data.ZipCode
+		data.Address
+		data.Complement
+		data.Unity
+		data.Neighborhood
+		data.Locality
+		data.Uf
+		data.State
+		data.Region
+		data.Ibge
+	}
 }
 ```
